@@ -2,6 +2,7 @@ package randomUtils;
 import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import static randomUtils.TestData.*;
 
 public class RandomUtils {
 
@@ -11,8 +12,10 @@ public class RandomUtils {
         System.out.println(getRandomItemFromArray(names));
         System.out.println(getRandomEmail());
         System.out.println(getdouble());
-    }
+        System.out.println(getRandomItemFromArray(months));
+        System.out.println(getRandomItemFromArray(subjects));
 
+    }
     static String[] names = {"Diana", "Kirill", "Vladimir", "Kristina", "Kira"};
 
     //Рандомная строка
@@ -38,7 +41,7 @@ public class RandomUtils {
 
     //Работа с массивом
     public static String getRandomItemFromArray(String[] values) {
-        int index = getRandomInt(0, values.length - 1);
+       int index = getRandomInt(0, values.length - 1);
         return values[index];
     }
 
